@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: harpokratos-service
+spec:
+  selector:
+    app: harpokratos
+  ports:
+    - name: "http"
+      port: 5000
+      targetPort: 5000
