@@ -4,6 +4,4 @@ build:
 	mv main ./bin/harpokratos
 
 docker-build:
-	cp bin/harpokratos .
 	docker build -t harpokratos:latest .
-	rm harpokratos

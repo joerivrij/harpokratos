@@ -1,8 +1,4 @@
-package impl
-
-type ResultModel struct {
-	Result string `json:"result"`
-}
+package models
 
 // ErrorModel is the base model used for handling errors
 type ErrorModel struct {

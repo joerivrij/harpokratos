@@ -1,13 +1,24 @@
-package impl
+package middleware
 
 import (
 	"encoding/json"
 	"fmt"
 	"github.com/kpango/glg"
 	"gopkg.in/oauth2.v3/utils/uuid"
+	"harpokratos/pkg/models"
 	"net/http"
 	"strconv"
 )
+
+type Adapter func(http.HandlerFunc) http.HandlerFunc
+
+// Iterate over adapters and run them one by one
+func Adapt(h http.HandlerFunc, adapters ...Adapter) http.HandlerFunc {
+	for _, adapter := range adapters {
+		h = adapter(h)
+	}
+	return h
+}
 
 func LogRequestDetails() Adapter {
 	return func(f http.HandlerFunc) http.HandlerFunc {
@@ -26,9 +37,9 @@ func ValidateRestMethod(method string) Adapter {
 
 		return func(w http.ResponseWriter, r *http.Request) {
 			if r.Method != method {
-				var err MethodError
-				e := MethodMessages{method, "Method " + r.Method + " not allowed at this endpoint"}
-				err = MethodError{ErrorModel{CreateGUID()}, append(err.Messages, e)}
+				var err models.MethodError
+				e := models.MethodMessages{method, "Method " + r.Method + " not allowed at this endpoint"}
+				err = models.MethodError{models.ErrorModel{CreateGUID()}, append(err.Messages, e)}
 				glg.Errorf("%s %s", r.URL.Path, e.Message)
 				ResponseWithJson(w, err)
 				return
@@ -43,11 +54,11 @@ func ResponseWithJson(w http.ResponseWriter, payload interface{}) {
 	code := 500
 
 	switch payload.(type) {
-	case ResultModel:
+	case models.ResultModel:
 		code = 200
-	case ValidationError:
+	case models.ValidationError:
 		code = 400
-	case MethodError:
+	case models.MethodError:
 		code = 405
 	default:
 		code = 500
