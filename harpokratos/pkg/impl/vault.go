@@ -1,9 +1,11 @@
 package impl
 
 import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+	vault "github.com/hashicorp/vault/api"
 	"github.com/kpango/glg"
-	"harpokratos/pkg/models"
-	"io/ioutil"
 	"net/http"
 )
 
@@ -21,20 +23,41 @@ func vaultHealth(vaultURL, vaultToken string) bool {
 	return true
 }
 
-func getSecretFromVault(vaultRequest http.Request) (*models.Secret, error) {
+func getSecretFromVault(vaultRequest http.Request) (*vault.Secret, error) {
 	client := &http.Client{}
 	resp, err := client.Do(&vaultRequest)
 	if err != nil {
 		return nil, err
 	}
 
-	defer resp.Body.Close()
-	responseBody, _ := ioutil.ReadAll(resp.Body)
-	glg.Info(string(responseBody))
-
-	vaultSecret, err := models.UnmarshalVaultSecret(responseBody)
+	secret, err := vault.ParseSecret(resp.Body)
 	if err != nil {
 		return nil, err
 	}
-	return &vaultSecret, nil
+
+	return secret, nil
+}
+
+func vaultLogin(username, password, vaultURL string) (*vault.Secret, error) {
+	url := fmt.Sprintf("%s/v1/auth/userpass/login/%s", vaultURL, username)
+	requestBody, err := json.Marshal(map[string]string{
+		"password": password,
+	})
+	if err != nil {
+		return nil, err
+	}
+	req, _ := http.NewRequest("POST", url, bytes.NewBuffer(requestBody))
+	client := &http.Client{}
+
+	resp, err := client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+
+	secret, err := vault.ParseSecret(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	return secret, nil
 }

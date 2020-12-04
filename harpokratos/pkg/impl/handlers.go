@@ -47,9 +47,15 @@ func (h *HarpokratosHandler)SecretHandler(w http.ResponseWriter, r *http.Request
 		return
 	}
 
+	vaultLogin, err := vaultLogin(h.Config.VaultUser, h.Config.VaultPassword, h.Config.VaultService)
+	if err != nil {
+		middleware.ResponseWithJson(w, err)
+		return
+	}
+
 	vaultURL := fmt.Sprintf("%s/v1/%s/data/%s?metadata=1", h.Config.VaultService, secretRequest.EngineName, secretRequest.SecretName)
 	req, _ := http.NewRequest("GET", vaultURL, nil)
-	req.Header.Add("X-Vault-Token", h.Config.VaultToken)
+	req.Header.Add("X-Vault-Token", vaultLogin.Auth.ClientToken)
 
 	secret, err := getSecretFromVault(*req)
 	if err != nil {
@@ -58,12 +64,12 @@ func (h *HarpokratosHandler)SecretHandler(w http.ResponseWriter, r *http.Request
 	}
 
 	if secretRequest.DataOnly {
-		dataOnly := secret.VaultSecretData.Data
+		dataOnly := secret.Data
 		middleware.ResponseWithJson(w, dataOnly)
 		return
 	}
-	secretResult := models.SecretResultModel{Result: *secret}
-	middleware.ResponseWithJson(w, secretResult)
+
+	middleware.ResponseWithJson(w, secret.Data)
 
 	return
 }

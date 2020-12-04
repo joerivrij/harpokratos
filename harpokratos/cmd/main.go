@@ -8,9 +8,6 @@ import (
 	"net/http"
 )
 
-var customTag = "harpokratos"
-var customErrTag = "CRIT"
-
 func init() {
 	errlog := glg.FileWriter("/tmp/error.log", 0666)
 	defer errlog.Close()
