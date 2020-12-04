@@ -1,7 +1,6 @@
 package config
 
 import (
-	"flag"
 	"github.com/ianschenck/envflag"
 	"github.com/kpango/glg"
 )
@@ -32,8 +31,6 @@ func Get() *HarpokratosConfig {
 		VaultUser: *vaultUsername,
 		VaultPassword: *vaultPassword,
 	}
-
-	flag.Parse()
 
 	return config
 }

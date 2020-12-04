@@ -8,7 +8,6 @@ import (
 	"harpokratos/pkg/middleware"
 	"harpokratos/pkg/models"
 	"net/http"
-	"os"
 	"strconv"
 )
 
@@ -28,9 +27,6 @@ func (h *HarpokratosHandler)VaultHealthCheck(w http.ResponseWriter, r *http.Requ
 
 	if !vaultHealth {
 		glg.Errorf("%s : %s", "vault healthy", strconv.FormatBool(vaultHealth))
-		glg.Info("waiting for vault to become healthy")
-
-		os.Exit(1)
 	} else {
 		glg.Infof("%s : %s", "vault healthy", strconv.FormatBool(vaultHealth))
 	}
@@ -64,12 +60,11 @@ func (h *HarpokratosHandler)SecretHandler(w http.ResponseWriter, r *http.Request
 	}
 
 	if secretRequest.DataOnly {
-		dataOnly := secret.Data
-		middleware.ResponseWithJson(w, dataOnly)
+		middleware.ResponseWithJson(w, secret.Data)
 		return
 	}
 
-	middleware.ResponseWithJson(w, secret.Data)
+	middleware.ResponseWithJson(w, secret)
 
 	return
 }

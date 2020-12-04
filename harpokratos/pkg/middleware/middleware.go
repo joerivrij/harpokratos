@@ -3,6 +3,7 @@ package middleware
 import (
 	"encoding/json"
 	"fmt"
+	vault "github.com/hashicorp/vault/api"
 	"github.com/kpango/glg"
 	"gopkg.in/oauth2.v3/utils/uuid"
 	"harpokratos/pkg/models"
@@ -55,6 +56,10 @@ func ResponseWithJson(w http.ResponseWriter, payload interface{}) {
 
 	switch payload.(type) {
 	case models.ResultModel:
+		code = 200
+	case *vault.Secret:
+		code = 200
+	case map[string]interface{}:
 		code = 200
 	case models.ValidationError:
 		code = 400
