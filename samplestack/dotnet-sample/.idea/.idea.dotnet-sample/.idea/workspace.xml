@@ -34,64 +34,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39c79a5d-b18f-41b9-9295-bc3cf3f18336" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dotnet-sample/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dotnet-sample/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dotnet-sample/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dotnet-sample/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dotnet-sample/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dotnet-sample/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dotnet-sample/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dotnet-sample/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.dotnet-sample/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/dotnet-sample" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/dotnet-sample.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/dotnet-sample.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/dotnet-sample.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/dotnet-sample.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/dotnet-sample.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/apphost" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.MvcApplicationPartsAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.RazorTargetAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/staticwebassets/dotnet-sample.StaticWebAssets.Manifest.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/staticwebassets/dotnet-sample.StaticWebAssets.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/dotnet-sample.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/dotnet-sample.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/dotnet-sample.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet-sample/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../golang-example/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../golang-example/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../golang-example/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python-example/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python-example/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python-example/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../python-example/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../helm/harpokratos/charts/vault-helm" beforeDir="false" afterPath="$PROJECT_DIR$/../../helm/harpokratos/charts/vault-helm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/dotnet-sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/dotnet-sample.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/dotnet-sample.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/dotnet-sample.runtimeconfig.dev.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/bin/Debug/net5.0/dotnet-sample.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/apphost" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.RazorTargetAssemblyInfo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/dotnet-sample.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/staticwebassets/dotnet-sample.StaticWebAssets.Manifest.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/Debug/net5.0/staticwebassets/dotnet-sample.StaticWebAssets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/dotnet-sample.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/dotnet-sample.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/dotnet-sample.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet-sample/obj/rider.project.restore.info" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +142,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607530670281</updated>
-      <workItem from="1607530676586" duration="313000" />
+      <workItem from="1607530676586" duration="518000" />
     </task>
     <servers />
   </component>
