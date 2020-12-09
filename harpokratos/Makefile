@@ -1,9 +1,9 @@
+git_short_hash=`git rev-parse --short HEAD`
+
 build:
-	GO111MODULE=on GOOS=linux CGO_ENABLED=0 go build -o main cmd/main.go
+	GO111MODULE=on GOOS=linux CGO_ENABLED=0 go build -o harpokratos cmd/main.go
 	mkdir ./bin
-	mv main ./bin/harpokratos
+	mv harpokratos ./bin/
 
 docker-build:
-	cp bin/harpokratos .
-	docker build -t harpokratos:latest .
-	rm harpokratos
+	docker build -t harpokratos:$(git_short_hash) .
