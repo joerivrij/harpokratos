@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golangexamplesidecar-service
+  labels:
+    app: golangexamplesidecar-service
+spec:
+  replicas: {{ .Values.config.replicas.low }}
+  selector:
+    matchLabels:
+      app: golangexamplesidecar-service
+  template:
+    metadata:
+      labels:
+        app: golangexamplesidecar-service
+        release: {{ .Release.Name }}
+        version: {{ .Values.images.harpokratos.tag }}
+        environment: {{ .Values.config.environment }}
+    spec:
+      containers:
+        - image: {{ .Values.images.harpokratos.repo }}:{{ .Values.images.harpokratos.tag }}
+          env:
+            - name: PORT
+              value: {{ .Values.envVariables.harpokratos.appPort }}
+            - name: VAULT_USERNAME
+              value: {{ .Values.envVariables.harpokratos.vaultUsername }}
+            - name: VAULT_PASSWORD
+              value: {{ .Values.envVariables.harpokratos.vaultPassword }}
+            - name: VAULT_SERVICE
+              value: http://{{ .Release.Name }}-vault:8200
+            - name: SECRET_VERSION
+              value: {{ .Values.envVariables.sidecar.secretVersion }}
+          imagePullPolicy: {{ .Values.config.pullPolicy }}
+          name: haprokratos-sidecar
+        - image: {{ .Values.images.golangexample.repo }}:{{ .Values.images.golangexample.tag }}
+          env:
+            - name: PORT
+              value: {{ .Values.envVariables.golangexample.appPort }}
+            - name: HARPOKRATOS_URL
+              value: {{ .Values.envVariables.sidecar.harpokatosUrl }}
+          imagePullPolicy: {{ .Values.config.pullPolicy }}
+          name: golangexamplesidecar

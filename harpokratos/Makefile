@@ -7,3 +7,7 @@ build:
 
 docker-build:
 	docker build -t harpokratos:$(git_short_hash) .
+
+docker-build-stack: docker-build
+	cd ../samplestack/golang-example && docker build -t golangexampleapi:$(git_short_hash) .
+	cd ../..

@@ -29,3 +29,21 @@ http://localhost:8200/ui/vault/access/userpass/item/user
 username: harpokratos
 password: harpokratos
 generated token's type: harpokratos
+
+
+Create a secret:
+
+kv -> name: config
+Create new secret:
+
+name: golangExample
+json -> true
+
+```json
+{
+    "secretSauce": "szechuan",
+    "databaseConnection": "User ID=root;Password=myPassword;Host=localhost;Port=5432;Database=myDataBase;Pooling=true;Min Pool Size=0;Max Pool Size=100;Connection Lifetime=0;",
+    "favorites": ["Doctor Strange", "Loki"]
+}
+
+```

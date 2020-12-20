@@ -1,0 +1,35 @@
+# Default values for harpokratos.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+config:
+  environment: development
+  sideCar: false
+  pullPolicy: Never
+  replicas:
+    low: 1
+    medium: 3
+    high: 5
+
+images:
+  harpokratos:
+    repo: harpokratos
+    tag: 0cb86f4
+  golangexample:
+    repo: golangexampleapi
+    tag: 0cb86f4
+
+envVariables:
+  harpokratos:
+    appPort: :5001
+    port: 5001
+    vaultUsername: harpokratos
+    vaultPassword: harpokratos
+  golangexample:
+    appPort: :5000
+    port: 5000
+    harpokatosUrl: http://harpokratos-service:5001
+  sidecar:
+    harpokatosUrl: http://localhost:5001
+    secretVersion: 1
+

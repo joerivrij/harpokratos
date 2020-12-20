@@ -4,3 +4,7 @@ description: Is it secret? Is it safe?
 type: application
 version: 0.0.1
 appVersion: 0.0.1
+#dependencies:
+#  - name: vault-helm
+#    version: 0.8.0
+#    repository: file://charts/vault-helm

@@ -7,5 +7,5 @@ spec:
     app: harpokratos
   ports:
     - name: "http"
-      port: 5000
-      targetPort: 5000
+      port:  {{ .Values.envVariables.harpokratos.port }}
+      targetPort: {{ .Values.envVariables.harpokratos.port }}

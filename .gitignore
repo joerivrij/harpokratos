@@ -16,3 +16,4 @@ harpokratos/bin
 # vendor/
 
 .idea
+/infra/helm/harpokratos/cluster-keys.json

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: harpokratos
+  labels:
+    app: harpokratos
+spec:
+  replicas: {{ .Values.config.replicas.low }}
+  selector:
+    matchLabels:
+      app: harpokratos
+  template:
+    metadata:
+      labels:
+        app: harpokratos
+        release: {{ .Release.Name }}
+        version: {{ .Values.images.harpokratos.tag }}
+        environment: {{ .Values.config.environment }}
+    spec:
+      containers:
+        - env:
+            - name: PORT
+              value: {{ .Values.envVariables.harpokratos.appPort }}
+            - name: VAULT_USERNAME
+              value: {{ .Values.envVariables.harpokratos.vaultUsername }}
+            - name: VAULT_PASSWORD
+              value: {{ .Values.envVariables.harpokratos.vaultPassword }}
+            - name: VAULT_SERVICE
+              value: http://{{ .Release.Name }}-vault:8200
+          image: {{ .Values.images.harpokratos.repo }}:{{ .Values.images.harpokratos.tag }}
+          imagePullPolicy: {{ .Values.config.pullPolicy }}
+          name: harpokratos

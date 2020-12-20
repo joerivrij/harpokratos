@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golangexampleapi
+  labels:
+    app: golangexampleapi
+spec:
+  replicas: {{ .Values.config.replicas.low }}
+  selector:
+    matchLabels:
+      app: golangexampleapi
+  template:
+    metadata:
+      labels:
+        app: golangexampleapi
+        release: {{ .Release.Name }}
+        version: {{ .Values.images.harpokratos.tag }}
+        environment: {{ .Values.config.environment }}
+    spec:
+      containers:
+        - env:
+            - name: PORT
+              value: {{ .Values.envVariables.golangexample.appPort }}
+            - name: HARPOKRATOS_URL
+              value: {{ .Values.envVariables.golangexample.harpokatosUrl }}
+          image: {{ .Values.images.golangexample.repo }}:{{ .Values.images.golangexample.tag }}
+          imagePullPolicy: {{ .Values.config.pullPolicy }}
+          name: golangexampleapi
